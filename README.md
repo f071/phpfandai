@@ -55,3 +55,9 @@ https://gitee.com/jamesren_781/codes/e9v45qa68wndrzbh3ktof
 
 echo file_get_contents($url);
 后来发现如果url是一个图片的话不行，因为content-type不对，浏览器无法识别。结果写了一套根据url后缀识别content-type的方法，等于是实现了一套服务器规则，使得浏览器显示正常了，当时他还得意了很久。这种实现丢失了很多好的东西，比如缓存，gzip等等，还白白浪费了性能。
+
+
+
+
+
+站源关闭强制跳转https.，在虚拟主机开启ssl，代码获取http协议还是https协议那段删掉，或者正则改一下获取网址https改http
